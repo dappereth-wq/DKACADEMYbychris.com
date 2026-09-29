@@ -19,7 +19,7 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
 .market-ticker-inner{min-height:58px;display:flex;align-items:center}
 .market-label{flex:0 0 auto;color:var(--green);font-size:10px;font-weight:900;letter-spacing:3px;padding-right:22px;border-right:1px solid #ffffff18}
 .tv-wrap{flex:1;min-width:0;padding-left:14px;min-height:58px;display:flex;align-items:center}
-.tv-wrap tv-tickers{display:block;width:100%}
+.tv-wrap .tradingview-widget-container{width:100%}
 .skool{position:relative;overflow:hidden;border:1px solid #1f5f72;border-radius:20px;background:radial-gradient(circle at 85% 15%,#0c4d5b 0,#071a28 42%,#04101b 100%);padding:42px}
 .skool:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-90px;top:-120px;background:#14e59a18;filter:blur(8px)}
 .skool-content{position:relative;z-index:1;max-width:760px}
@@ -70,11 +70,27 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
   <div class="wrap market-ticker-inner">
     <div class="market-label">MERCADOS</div>
     <div class="tv-wrap">
-      <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-tickers.js"></script>
-      <tv-tickers
-        symbols="NASDAQ:NDX,CME_MINI:NQ1!,BITSTAMP:BTCUSD,OANDA:XAUUSD,FOREXCOM:SPXUSD,INDEX:DXY,ECONOMICS:US10Y,TVC:US30Y"
-        hide-chart>
-      </tv-tickers>
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+          "symbols": [
+            {"proName": "OANDA:NAS100USD", "title": "NASDAQ 100"},
+            {"proName": "OANDA:SPX500USD", "title": "S&P 500"},
+            {"proName": "BITSTAMP:BTCUSD", "title": "Bitcoin"},
+            {"proName": "BITSTAMP:ETHUSD", "title": "Ethereum"},
+            {"proName": "OANDA:XAUUSD", "title": "Oro"},
+            {"proName": "TVC:DXY", "title": "DXY"},
+            {"proName": "TVC:US10Y", "title": "Bono 10Y"}
+          ],
+          "showSymbolLogo": true,
+          "isTransparent": true,
+          "displayMode": "adaptive",
+          "colorTheme": "dark",
+          "locale": "es"
+        }
+        </script>
+      </div>
     </div>
   </div>
 </div>
