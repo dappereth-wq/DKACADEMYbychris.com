@@ -18,10 +18,7 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
 .market-ticker{background:#020b14;border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12;overflow:hidden;padding:0}
 .market-ticker-inner{min-height:58px;display:flex;align-items:center}
 .market-label{flex:0 0 auto;color:var(--green);font-size:10px;font-weight:900;letter-spacing:3px;padding-right:22px;border-right:1px solid #ffffff18}
-.tv-wrap{flex:1;min-width:0;padding-left:14px}
-.market-ticker .tv-wrap{min-height:56px;display:flex;align-items:center;overflow:hidden}
-.market-ticker .tradingview-widget-container{width:100%;}
-.market-ticker .tradingview-widget-copyright{display:none!important}
+.tv-wrap{flex:1;min-width:0;padding-left:14px;min-height:58px;display:flex;align-items:center}
 .tv-wrap tv-ticker-tape{display:block;width:100%}
 .skool{position:relative;overflow:hidden;border:1px solid #1f5f72;border-radius:20px;background:radial-gradient(circle at 85% 15%,#0c4d5b 0,#071a28 42%,#04101b 100%);padding:42px}
 .skool:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-90px;top:-120px;background:#14e59a18;filter:blur(8px)}
@@ -47,7 +44,10 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
 
 .room-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.room-card{background:linear-gradient(180deg,#0a2031e8,#061521e8);border:1px solid var(--line);border-radius:18px;padding:26px}.room-card.featured{border-color:var(--green);box-shadow:0 18px 60px #0006}.room-price{font-size:52px;font-weight:900;letter-spacing:-3px;margin:10px 0}.room-price small{font-size:25px}.room-price span{font-size:12px;color:var(--muted);letter-spacing:0;margin-left:5px}.room-includes{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:22px 0}.room-item{border:1px solid var(--line);border-radius:10px;padding:12px;color:#cbd8e3;font-size:11px}.room-item b{display:block;color:#fff;margin-bottom:4px}.payment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}.payment-card{background:#061521;border:1px solid var(--line);border-radius:14px;padding:20px}.payment-card h3{margin:0 0 14px;color:#fff}.pay-row{border-top:1px solid #ffffff10;padding:10px 0;position:relative}.pay-row span{display:block;color:#91a3b3;font-size:9px;text-transform:uppercase;letter-spacing:1px}.pay-row strong{display:block;font-size:12px;overflow-wrap:anywhere;padding-right:52px}.copy-btn{position:absolute;right:0;top:10px;background:none;border:0;color:var(--green);font-size:9px;font-weight:900;cursor:pointer}.wallet{background:#020b12;border:1px solid var(--line);padding:13px;border-radius:9px;word-break:break-all;font:11px monospace;color:#dfe9ed}.pay-warning{margin-top:12px;padding:10px;border-radius:8px;background:#201a0a;border:1px solid #66501b;color:#e9c36b;font-size:10px}.proof{margin-top:16px;padding:24px;border:1px solid #14e59a55;border-radius:16px;background:#14e59a08}.proof p{color:var(--muted)}.proof-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.toast-room{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#eafff4;color:#00150e;padding:9px 14px;border-radius:99px;font-size:11px;font-weight:900;transition:.2s;z-index:99}.toast-room.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:850px){.room-grid,.payment-grid{grid-template-columns:1fr}.room-includes{grid-template-columns:1fr}}
+
+.room-teaser{padding:76px 0 72px}.room-teaser .sectionhead{text-align:center;max-width:780px;margin:0 auto 28px}.room-teaser-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.room-teaser-item{border:1px solid var(--line);border-radius:12px;padding:17px;background:#061521}.room-teaser-item b{display:block;color:#fff;font-size:10px;margin-bottom:6px}.room-teaser-item span{display:block;color:#91a3b3;font-size:10px;line-height:1.5}@media(max-width:850px){.room-teaser-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.room-teaser{padding:55px 0}.room-teaser-grid{grid-template-columns:1fr}}
 </style>
+<script type="module" src="https://www.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
 </head>
 <body>
 <nav><div class="wrap nav">
@@ -75,14 +75,14 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
         {
           "symbols": [
-            {"proName":"NASDAQ:NDX","title":"NASDAQ 100"},
+            {"proName":"FOREXCOM:NSXUSD","title":"NASDAQ 100"},
             {"proName":"CME_MINI:NQ1!","title":"NQ"},
-            {"proName":"COINBASE:BTCUSD","title":"BTC"},
+            {"proName":"BITSTAMP:BTCUSD","title":"BTC"},
             {"proName":"OANDA:XAUUSD","title":"XAU"},
             {"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},
-            {"proName":"INDEX:DXY","title":"DXY"},
-            {"proName":"TVC:US10Y","title":"US 10Y"},
-            {"proName":"TVC:US30Y","title":"US 30Y"}
+            {"proName":"TVC:DXY","title":"DXY"},
+            {"proName":"CBOT_MINI:10Y1!","title":"US 10Y"},
+            {"proName":"CBOT_MINI:30Y1!","title":"US 30Y"}
           ],
           "colorTheme":"dark",
           "locale":"en",
@@ -96,6 +96,16 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
     </div>
   </div>
 </div>
+<section id="room"><div class="wrap room-teaser">
+<div class="sectionhead"><div class="eyebrow">DK TRADING ROOM</div><h2>Más que una operativa en vivo.</h2><p>Un espacio privado para aprender el Método ChrisNasdaq, desarrollar criterio propio y trabajar tu proceso como trader. <strong style="color:#fff">Cupos limitados.</strong></p></div>
+<div class="room-teaser-grid">
+<div class="room-teaser-item"><b>LIVE TRADING · NY OPEN</b><span>Operativa en vivo por Discord.</span></div>
+<div class="room-teaser-item"><b>MÉTODO CHRISNASDAQ</b><span>Contexto, estructura, liquidez, precio y volumen.</span></div>
+<div class="room-teaser-item"><b>ANÁLISIS PERSONALIZADO</b><span>Revisión de tu proceso y errores.</span></div>
+<div class="room-teaser-item"><b>MACRO + PSICOTRADING</b><span>Contexto de mercado y gestión emocional.</span></div>
+</div>
+<div style="text-align:center;margin-top:24px"><a class="btn green" href="room.html">CONOCE EL DK TRADING ROOM →</a></div>
+</div></section>
 
 <section id="sobre"><div class="wrap about"><img class="aboutimg" src="setup.png" alt="ChrisNasdaq operando">
 <div class="copy"><div class="eyebrow">SOBRE MÍ</div><h2>CHRISNASDAQ</h2>
@@ -225,33 +235,7 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
 
 </main>
 
-<section id="room"><div class="wrap">
-<div class="sectionhead"><div class="eyebrow">DK TRADING ROOM</div><h2>Más que una operativa en vivo.</h2><p>Un espacio reducido para aprender el Método ChrisNasdaq, desarrollar criterio propio y trabajar tu proceso como trader. <strong style="color:#fff">Máximo 8 personas.</strong></p></div>
-<div class="room-grid">
-<div class="room-card"><div class="eyebrow">MENSUAL</div><h3>DK Trading Room</h3><div class="room-price"><small>$</small>100<span>/ mes</span></div><p>Acceso mensual al ecosistema DK Trading Room.</p><a class="btn green" href="#datos-pago">ELEGIR $100 →</a></div>
-<div class="room-card featured"><div class="eyebrow">TRIMESTRAL</div><h3>DK Trading Room</h3><div class="room-price"><small>$</small>250<span>/ 3 meses</span></div><p>Acceso trimestral al ecosistema DK Trading Room.</p><a class="btn green" href="#datos-pago">ELEGIR $250 →</a></div>
-</div>
-<div class="room-includes">
-<div class="room-item"><b>LIVE TRADING · NY OPEN</b>Operativa en vivo por Discord con lectura de contexto, ejecución y gestión.</div>
-<div class="room-item"><b>MÉTODO CHRISNASDAQ</b>Contexto, estructura, liquidez, precio y confirmaciones de volumen.</div>
-<div class="room-item"><b>ANÁLISIS PERSONALIZADO</b>Revisión individual de tu proceso, errores y hábitos.</div>
-<div class="room-item"><b>ANÁLISIS DE CARTERA</b>Revisión de exposición y decisiones de cartera.</div>
-<div class="room-item"><b>MACRO & CONTEXTO</b>Análisis de datos macro y eventos relevantes para los mercados.</div>
-<div class="room-item"><b>ALERTAS SPOT</b>Seguimiento de posibles oportunidades de compra en spot.</div>
-<div class="room-item"><b>EMPRESAS DE EE.UU.</b>Análisis y seguimiento de compañías estadounidenses de alto impacto.</div>
-<div class="room-item"><b>PSICOTRADING</b>Disciplina, gestión emocional y toma de decisiones.</div>
-<div class="room-item"><b>INTELIGENCIA EMOCIONAL</b>Identificación de patrones emocionales que afectan el trading.</div>
-<div class="room-item"><b>COMUNIDAD DK</b>Preguntas, análisis, aprendizaje y acompañamiento.</div>
-</div>
-<div id="datos-pago" class="sectionhead" style="margin-top:48px"><div class="eyebrow">PAGO</div><h2>Elige cómo quieres pagar.</h2><p>Realiza el pago y después envía tu comprobante para verificar tu acceso.</p></div>
-<div class="payment-grid">
-<div class="payment-card"><h3>USD · ACH</h3><div class="pay-row"><span>Titular</span><strong>Christopher Andres Marquez Ponte</strong></div><div class="pay-row"><span>Account Number</span><strong>8334531016</strong><button class="copy-btn" onclick="copyRoom('8334531016')">COPIAR</button></div><div class="pay-row"><span>ACH Routing</span><strong>026073150</strong><button class="copy-btn" onclick="copyRoom('026073150')">COPIAR</button></div><div class="pay-row"><span>Tipo</span><strong>Checking</strong></div><div class="pay-row"><span>Banco</span><strong>Community Federal Savings Bank</strong></div><div class="pay-row"><span>Dirección</span><strong>5 Penn Plaza, 14th Floor, New York, NY 10001, US</strong></div></div>
-<div class="payment-card"><h3>USD · WIRE</h3><div class="pay-row"><span>Titular</span><strong>Christopher Andres Marquez Ponte</strong></div><div class="pay-row"><span>Account Number</span><strong>8334531016</strong><button class="copy-btn" onclick="copyRoom('8334531016')">COPIAR</button></div><div class="pay-row"><span>Routing</span><strong>026073008</strong><button class="copy-btn" onclick="copyRoom('026073008')">COPIAR</button></div><div class="pay-row"><span>Tipo</span><strong>Checking</strong></div><div class="pay-row"><span>Banco</span><strong>Community Federal Savings Bank</strong></div><div class="pay-row"><span>Dirección</span><strong>5 Penn Plaza, 14th Floor, New York, NY 10001, US</strong></div></div>
-<div class="payment-card"><h3>EUR · IBAN</h3><div class="pay-row"><span>Titular</span><strong>Christopher Andres Marquez Ponte</strong></div><div class="pay-row"><span>IBAN</span><strong>GB78TCCL00997994166524</strong><button class="copy-btn" onclick="copyRoom('GB78TCCL00997994166524')">COPIAR</button></div><div class="pay-row"><span>Banco</span><strong>The Currency Cloud Limited</strong></div><div class="pay-row"><span>Dirección</span><strong>1 Sheldon Square, London, W2 6TT, United Kingdom</strong></div></div>
-<div class="payment-card"><h3>USDT · BEP20</h3><div class="pay-row"><span>Wallet</span><div class="wallet">0x182B854991D36F53Dd7c8FE110e12C4Ba1915e27</div><button class="btn" style="margin-top:12px;width:100%;text-align:center;cursor:pointer" onclick="copyRoom('0x182B854991D36F53Dd7c8FE110e12C4Ba1915e27')">COPIAR WALLET</button></div><div class="pay-warning"><b>IMPORTANTE:</b> envía USDT únicamente por la red BEP20 / BSC. Verifica la red antes de confirmar.</div></div>
-</div>
-<div class="proof"><div class="eyebrow">ÚLTIMO PASO</div><h3>¿Ya realizaste tu pago?</h3><p>Envía el capture/comprobante por DM indicando tu nombre y el plan elegido.</p><div class="proof-actions"><a class="btn green" href="https://t.me/CMDKTRADING" target="_blank" rel="noopener">TELEGRAM · @CMDKTRADING →</a><span class="btn">WHATSAPP · PRÓXIMAMENTE</span></div></div>
-</div></section>
+
 <div class="toast-room" id="toastRoom">Copiado ✓</div>
 <script>function copyRoom(t){navigator.clipboard.writeText(t).then(function(){var x=document.getElementById('toastRoom');x.classList.add('show');setTimeout(function(){x.classList.remove('show')},1400)})}</script>
 <footer><div class="wrap foot"><div><b style="color:#fff">DK TRADING ACADEMY</b><br>by ChrisNasdaq</div><div>Leer el mercado. Gestionar el riesgo. Ejecutar el proceso.</div></div></footer>
