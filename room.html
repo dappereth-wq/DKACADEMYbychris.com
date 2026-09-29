@@ -1,40 +1,383 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>DK Trading Room · ChrisNasdaq</title><style>
-:root{--bg:#04101b;--card:#081b2b;--line:#17425b;--blue:#087cff;--green:#14e59a;--text:#f7fbff;--muted:#a9b8c7}
-*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 75% 0,#0c2a43 0,#04101b 42%,#020a12 100%);color:var(--text);font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
-nav{position:sticky;top:0;z-index:10;background:#03101bdd;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:2px}.brand img{width:42px;height:42px;object-fit:contain}.brand small{display:block;color:#9eafbd;font-size:8px;letter-spacing:3px}.links{display:flex;gap:22px;font-size:11px;font-weight:700;color:#c7d4df}.links a:hover{color:var(--green)}.btn{display:inline-block;padding:13px 20px;border:1px solid #ffffff55;border-radius:9px;font-size:12px;font-weight:800}.green{background:var(--green);border-color:var(--green);color:#00150e}
-.hero{display:grid;grid-template-columns:1fr .9fr;gap:36px;align-items:center;padding:65px 0}.kicker,.eyebrow{color:var(--green);font-size:11px;letter-spacing:4px;font-weight:800}.hero h1{font-size:clamp(55px,7vw,88px);line-height:.9;letter-spacing:-4px;margin:18px 0}.grad{background:linear-gradient(90deg,#fff,#1689ff);-webkit-background-clip:text;color:transparent}.hero h2{font-size:22px;margin:0 0 12px}.hero p,.copy p,.sectionhead p,.card p{color:var(--muted);line-height:1.7}.heroBtns{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}.heroimg{height:610px}.heroimg img,.aboutimg{width:100%;height:100%;object-fit:cover;border-radius:22px;border:1px solid var(--line);box-shadow:0 25px 70px #0008}
-section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectionhead h2{font-size:38px;margin:9px 0}.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}.aboutimg{height:540px}.quote{border-left:3px solid var(--green);padding-left:16px;font-size:20px;font-weight:800;margin:24px 0}.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.card{background:linear-gradient(180deg,#0a2031e8,#061521e8);border:1px solid var(--line);border-radius:14px;padding:22px}.method{min-height:165px}.method .icon{color:var(--green);font-size:25px;margin-bottom:15px}.method h3,.social h3,.resource h3{font-size:13px;margin:0 0 7px}.socials{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.social{min-height:155px;display:flex;flex-direction:column;justify-content:space-between}.social .icon{font-size:25px}.go{color:var(--green);font-size:11px;font-weight:800}.resources{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.resource:first-child{border-color:var(--green)}.tag{background:var(--green);color:#00150e;border-radius:5px;padding:4px 7px;font-size:8px;font-weight:900}.resource .btn{margin-top:12px;width:100%;text-align:center}.community{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feature{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#061725}.feature img{width:100%;height:280px;object-fit:cover}.featurebody{padding:27px}.feature h3{font-size:29px;margin:8px 0}.schedule{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:18px 0}.slot{border:1px solid var(--line);padding:10px;border-radius:8px;font-size:11px}.slot span{display:block;color:var(--green);font-weight:800;margin-top:4px}.partners{display:flex;gap:10px;flex-wrap:wrap}.pill{padding:11px 16px;border:1px solid var(--line);border-radius:999px;color:#cbd8e3;font-size:11px}footer{border-top:1px solid #ffffff10;padding:30px 0;color:#91a3b3;font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:850px){.links{display:none}.hero,.about,.community{grid-template-columns:1fr}.heroimg{height:500px}.grid5,.socials{grid-template-columns:repeat(2,1fr)}.resources{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.grid5,.socials,.resources{grid-template-columns:1fr}.schedule{grid-template-columns:1fr}.hero h1{font-size:56px}.heroimg{height:430px}.foot{flex-direction:column}}
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#050b12">
+<title>DK Trading Room · ChrisNasdaq</title>
 
-.market-ticker{background:#020b14;border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12;overflow:hidden;padding:0}
-.market-ticker-inner{min-height:58px;display:flex;align-items:center}
-.market-label{flex:0 0 auto;color:var(--green);font-size:10px;font-weight:900;letter-spacing:3px;padding-right:22px;border-right:1px solid #ffffff18}
-.tv-wrap{flex:1;min-width:0;padding-left:14px}
-.tv-wrap tv-ticker-tape{display:block;width:100%}
-.skool{position:relative;overflow:hidden;border:1px solid #1f5f72;border-radius:20px;background:radial-gradient(circle at 85% 15%,#0c4d5b 0,#071a28 42%,#04101b 100%);padding:42px}
-.skool:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-90px;top:-120px;background:#14e59a18;filter:blur(8px)}
-.skool-content{position:relative;z-index:1;max-width:760px}
-.skool-badge{display:inline-block;border:1px solid #14e59a66;color:var(--green);border-radius:999px;padding:7px 12px;font-size:9px;font-weight:900;letter-spacing:2px}
-.skool h3{font-size:clamp(30px,5vw,50px);margin:15px 0 8px;letter-spacing:-2px}
-.skool p{color:var(--muted);line-height:1.7;max-width:700px}
-.platform-section{padding-top:85px}
-.platform-intro{margin-bottom:34px}
-.platform-title{font-size:42px;margin:8px 0}
-.platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.platform-card{position:relative;min-height:220px;border:1px solid #1d4d63;border-radius:18px;background:linear-gradient(145deg,#0b2233,#04111c);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:22px;transition:.2s transform,.2s border-color,.2s box-shadow}
-.platform-card:hover{transform:translateY(-4px);border-color:#14e59a88;box-shadow:0 18px 45px #0008}
-.platform-card .type{color:var(--green);font-size:9px;font-weight:900;letter-spacing:3px}
-.platform-logo{height:90px;display:flex;align-items:center;justify-content:center;margin:6px 0}
-.platform-logo img{max-width:82%;max-height:78px;object-fit:contain}
-.platform-logo.bing img{max-width:100%;max-height:125px;border-radius:10px}
-.platform-name{font-size:17px;font-weight:900;margin-top:5px}
-.platform-link{color:#c8d6e1;font-size:10px;margin-top:5px}
-.platform-btn{display:inline-block;margin-top:15px;text-align:center;padding:11px 14px;border:1px solid #ffffff35;border-radius:9px;font-size:10px;font-weight:900}
-@media(max-width:850px){.platform-grid{grid-template-columns:1fr}.skool{padding:28px}.market-label{display:none}.tv-wrap{padding-left:0}}
+<style>
+:root{
+  --bg:#050a10;
+  --bg2:#08111a;
+  --card:#0a141e;
+  --card2:#0d1924;
+  --line:rgba(255,255,255,.09);
+  --line2:rgba(20,229,154,.25);
+  --green:#14e59a;
+  --white:#f5f8fa;
+  --muted:#91a0ae;
+  --blue:#1689ff;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--white);
+  background:
+    radial-gradient(circle at 78% -5%,rgba(22,137,255,.13),transparent 32%),
+    radial-gradient(circle at 10% 25%,rgba(20,229,154,.055),transparent 28%),
+    var(--bg);
+  font-family:Inter,Arial,Helvetica,sans-serif;
+}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1060px,90%);margin:auto}
 
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(5,10,16,.82);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  height:72px;display:flex;align-items:center;justify-content:space-between;
+}
+.brand{
+  display:flex;align-items:center;gap:11px;
+  font-size:12px;font-weight:900;letter-spacing:2px;
+}
+.brand-mark{
+  width:34px;height:34px;border:1px solid var(--line);
+  border-radius:10px;display:grid;place-items:center;
+  color:var(--green);font-weight:900;
+}
+.brand small{
+  display:block;color:#71808e;font-size:7px;
+  letter-spacing:2.5px;margin-top:3px;
+}
+.back{
+  color:#aebac5;font-size:10px;font-weight:800;
+  letter-spacing:1.2px;border:1px solid var(--line);
+  padding:10px 14px;border-radius:999px;
+}
+.back:hover{border-color:var(--line2);color:#fff}
 
-.room-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.room-card{background:linear-gradient(180deg,#0a2031e8,#061521e8);border:1px solid var(--line);border-radius:18px;padding:26px}.room-card.featured{border-color:var(--green);box-shadow:0 18px 60px #0006}.room-price{font-size:52px;font-weight:900;letter-spacing:-3px;margin:10px 0}.room-price small{font-size:25px}.room-price span{font-size:12px;color:var(--muted);letter-spacing:0;margin-left:5px}.room-includes{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:22px 0}.room-item{border:1px solid var(--line);border-radius:10px;padding:12px;color:#cbd8e3;font-size:11px}.room-item b{display:block;color:#fff;margin-bottom:4px}.payment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}.payment-card{background:#061521;border:1px solid var(--line);border-radius:14px;padding:20px}.payment-card h3{margin:0 0 14px;color:#fff}.pay-row{border-top:1px solid #ffffff10;padding:10px 0;position:relative}.pay-row span{display:block;color:#91a3b3;font-size:9px;text-transform:uppercase;letter-spacing:1px}.pay-row strong{display:block;font-size:12px;overflow-wrap:anywhere;padding-right:52px}.copy-btn{position:absolute;right:0;top:10px;background:none;border:0;color:var(--green);font-size:9px;font-weight:900;cursor:pointer}.wallet{background:#020b12;border:1px solid var(--line);padding:13px;border-radius:9px;word-break:break-all;font:11px monospace;color:#dfe9ed}.pay-warning{margin-top:12px;padding:10px;border-radius:8px;background:#201a0a;border:1px solid #66501b;color:#e9c36b;font-size:10px}.proof{margin-top:16px;padding:24px;border:1px solid #14e59a55;border-radius:16px;background:#14e59a08}.proof p{color:var(--muted)}.proof-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.toast-room{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#eafff4;color:#00150e;padding:9px 14px;border-radius:99px;font-size:11px;font-weight:900;transition:.2s;z-index:99}.toast-room.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:850px){.room-grid,.payment-grid{grid-template-columns:1fr}.room-includes{grid-template-columns:1fr}}
-.room-teaser{padding-top:20px}.room-teaser-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0}.compact-includes{margin-top:18px}.room-action{text-align:center;margin-top:28px}.room-action .btn{display:inline-block}.room-teaser .room-card{min-height:0}.room-teaser .room-card p{margin-bottom:0}@media(max-width:850px){.room-teaser-grid{grid-template-columns:1fr}}
-</style></head><body><nav><div class="wrap nav"><a class="brand" href="index.html">DK<br><small>TRADING ACADEMY</small></a><a class="btn" href="index.html#comunidad">← VOLVER</a></div></nav>
-<section id="room"><div class="wrap"><div class="sectionhead"><div class="eyebrow">DK TRADING ROOM</div><h2>Acceso al Room</h2><p>Elige tu plan y, después, solicita los datos de pago. Los datos bancarios no se publican en esta página.</p></div><div class="room-grid"><div class="room-card"><div class="eyebrow">MENSUAL</div><h3>DK Trading Room</h3><div class="room-price"><small>$</small>100<span>/ mes</span></div></div><div class="room-card featured"><div class="eyebrow">TRIMESTRAL</div><h3>DK Trading Room</h3><div class="room-price"><small>$</small>250<span>/ 3 meses</span></div></div></div><div class="room-includes"><div class="room-item"><b>LIVE TRADING · NY OPEN</b>Operativa en vivo por Discord.</div><div class="room-item"><b>MÉTODO CHRISNASDAQ</b>Contexto, estructura, liquidez, precio y volumen.</div><div class="room-item"><b>ANÁLISIS PERSONALIZADO</b>Revisión de tu proceso.</div><div class="room-item"><b>MACRO + PSICOTRADING</b>Contexto y gestión emocional.</div><div class="room-item"><b>COMUNIDAD DK</b>Preguntas, análisis y acompañamiento.</div></div><div class="proof"><div class="eyebrow">PAGO</div><h3>Solicita los datos de pago</h3><p>Escríbeme directamente para recibir las instrucciones correspondientes a tu plan.</p><div class="proof-actions"><a class="btn green" href="https://t.me/CMDKTRADING" target="_blank" rel="noopener">TELEGRAM · @CMDKTRADING →</a></div></div></div></section></body></html>
+/* HERO */
+.hero{padding:96px 0 62px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.eyebrow{
+  color:var(--green);font-size:9px;font-weight:900;
+  letter-spacing:3.5px;text-transform:uppercase;
+}
+.hero h1{
+  margin:18px auto 20px;
+  max-width:800px;
+  font-size:clamp(42px,7vw,76px);
+  line-height:.98;letter-spacing:-3.5px;
+}
+.hero h1 span{
+  background:linear-gradient(90deg,#fff 20%,#7fbaff 75%,var(--green));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p{
+  max-width:650px;margin:0 auto;color:var(--muted);
+  line-height:1.8;font-size:15px;
+}
+.hero-note{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:25px;padding:9px 14px;border:1px solid var(--line);
+  border-radius:999px;color:#c7d1d9;font-size:10px;
+  background:rgba(255,255,255,.025);
+}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+
+/* VALUE */
+.value{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:18px;
+  width:min(1060px,90%);
+  margin:25px auto 75px;
+}
+.panel{
+  background:linear-gradient(145deg,rgba(13,25,36,.95),rgba(7,15,23,.95));
+  border:1px solid var(--line);border-radius:22px;
+}
+.story{padding:34px}
+.story h2{font-size:30px;letter-spacing:-1.2px;margin:10px 0 15px}
+.story p{color:var(--muted);line-height:1.75;margin:0 0 17px}
+.story strong{color:#fff}
+.quote{
+  margin-top:25px;padding:16px 18px;
+  border-left:2px solid var(--green);
+  background:rgba(20,229,154,.035);
+  color:#dce5eb;font-size:13px;line-height:1.6;
+}
+.private{
+  padding:34px;display:flex;flex-direction:column;justify-content:space-between;
+  background:
+    radial-gradient(circle at 90% 10%,rgba(20,229,154,.11),transparent 35%),
+    linear-gradient(145deg,#0c1923,#071019);
+}
+.private .number{font-size:62px;line-height:1;font-weight:900;letter-spacing:-4px;margin:12px 0}
+.private .label{color:var(--muted);font-size:12px;line-height:1.6}
+.private hr{border:0;border-top:1px solid var(--line);width:100%;margin:25px 0}
+.private .mini{color:#d9e2e8;font-size:12px;line-height:1.8}
+
+/* INCLUDED */
+.section{padding:30px 0 75px}
+.section-head{margin-bottom:28px}
+.section-head h2{font-size:32px;letter-spacing:-1.4px;margin:9px 0}
+.section-head p{color:var(--muted);max-width:650px;line-height:1.7;margin:0}
+.features{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+}
+.feature{
+  padding:22px;border:1px solid var(--line);border-radius:16px;
+  background:rgba(255,255,255,.018);
+}
+.feature:hover{border-color:rgba(20,229,154,.22)}
+.feature .num{color:#61717f;font-size:10px;font-weight:900;letter-spacing:1px}
+.feature h3{font-size:13px;margin:12px 0 7px}
+.feature p{margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+
+/* SCHEDULE */
+.schedule{
+  margin-top:30px;padding:25px;
+  border:1px solid var(--line);border-radius:18px;
+  background:#07111a;
+}
+.schedule-top{display:flex;justify-content:space-between;gap:20px;align-items:end}
+.schedule h3{margin:7px 0 0;font-size:22px}
+.schedule small{color:var(--muted)}
+.days{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.day{
+  padding:16px;border:1px solid var(--line);border-radius:12px;
+  background:rgba(255,255,255,.018)
+}
+.day b{font-size:12px}.day span{display:block;color:var(--green);font-size:10px;font-weight:900;margin-top:5px}
+
+/* PLANS */
+.plans{padding:25px 0 85px}
+.plan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.plan{
+  position:relative;padding:30px;border:1px solid var(--line);
+  border-radius:22px;background:linear-gradient(160deg,#0c1722,#071019);
+}
+.plan.featured{
+  border-color:rgba(20,229,154,.45);
+  box-shadow:0 25px 80px rgba(0,0,0,.28);
+}
+.badge{
+  position:absolute;top:18px;right:18px;
+  padding:6px 9px;border-radius:999px;
+  background:rgba(20,229,154,.1);color:var(--green);
+  border:1px solid rgba(20,229,154,.2);
+  font-size:8px;font-weight:900;letter-spacing:1.5px;
+}
+.plan h3{margin:0;font-size:14px;letter-spacing:1px}
+.price{margin:16px 0 5px;font-size:52px;font-weight:900;letter-spacing:-3px}
+.price span{font-size:11px;color:var(--muted);letter-spacing:0;margin-left:5px}
+.plan-note{color:var(--muted);font-size:11px;line-height:1.6;margin-bottom:24px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:100%;padding:13px 18px;border-radius:10px;
+  border:1px solid var(--line);font-size:10px;font-weight:900;
+  letter-spacing:1px;
+}
+.btn.green{background:var(--green);border-color:var(--green);color:#00150e}
+.btn.dark{color:#dce5eb}
+.btn:hover{transform:translateY(-1px)}
+
+/* PROCESS */
+.process{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+  margin-top:18px;
+}
+.step{padding:20px;border-top:1px solid var(--line)}
+.step span{color:var(--green);font-size:9px;font-weight:900;letter-spacing:2px}
+.step h3{font-size:13px;margin:9px 0 6px}
+.step p{color:var(--muted);font-size:11px;line-height:1.65;margin:0}
+
+/* PAYMENT */
+.access{
+  padding:36px;border:1px solid rgba(20,229,154,.18);
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 100% 0,rgba(20,229,154,.08),transparent 38%),
+    #07111a;
+  text-align:center;
+}
+.access h2{font-size:28px;letter-spacing:-1px;margin:10px 0}
+.access p{max-width:580px;margin:0 auto 22px;color:var(--muted);line-height:1.7;font-size:12px}
+.access .btn{width:auto;min-width:230px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:28px 0 38px;color:#71808e;font-size:10px}
+.foot{display:flex;justify-content:space-between;gap:20px}
+.foot b{color:#dce5eb}
+
+@media(max-width:800px){
+  .value,.plan-grid{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+  .days{grid-template-columns:1fr}
+  .process{grid-template-columns:1fr}
+  .schedule-top{align-items:start;flex-direction:column}
+}
+@media(max-width:520px){
+  .hero{padding-top:58px}
+  .hero h1{letter-spacing:-2.5px}
+  .story,.private,.plan,.access{padding:25px}
+  .private .number{font-size:52px}
+  .foot{flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">DK</div>
+      <div>DK TRADING<small>ACADEMY · CHRISNASDAQ</small></div>
+    </a>
+    <a class="back" href="index.html#comunidad">← VOLVER A DK ACADEMY</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="hero wrap">
+  <div class="eyebrow">DK TRADING ROOM · PRIVATE ACCESS</div>
+  <h1>Un espacio para <span>operar, entender y mejorar.</span></h1>
+  <p>
+    Acompañamiento directo para traders que quieren desarrollar criterio propio,
+    trabajar su proceso y aprender a leer el mercado con el Método ChrisNasdaq.
+  </p>
+  <div class="hero-note"><span class="dot"></span> Cupos limitados</div>
+</section>
+
+<section class="wrap value">
+  <div class="panel story">
+    <div class="eyebrow">LA FILOSOFÍA</div>
+    <h2>No se trata de recibir más señales.</h2>
+    <p>
+      El objetivo del Room es que puedas <strong>entender por qué el mercado se mueve</strong>,
+      construir un proceso y tomar decisiones con mayor claridad.
+    </p>
+    <p>
+      Trabajamos contexto, estructura, precio, liquidez, volumen, macro y psicotrading
+      dentro de una comunidad pequeña donde el seguimiento puede ser más cercano.
+    </p>
+    <div class="quote">
+      “La meta no es depender de una entrada. La meta es desarrollar criterio.”
+    </div>
+  </div>
+
+  <div class="panel private">
+    <div>
+      <div class="eyebrow">PRIVATE ROOM</div>
+      <div class="number">08</div>
+      <div class="label">cupos disponibles por grupo</div>
+    </div>
+    <hr>
+    <div class="mini">
+      Menos personas.<br>
+      Más interacción.<br>
+      Más espacio para trabajar cada proceso.
+    </div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="section-head">
+    <div class="eyebrow">DENTRO DEL ROOM</div>
+    <h2>Lo que trabajamos.</h2>
+    <p>No es una biblioteca de señales. Es un espacio de trabajo alrededor del mercado y de tu proceso como trader.</p>
+  </div>
+
+  <div class="features">
+    <div class="feature"><div class="num">01</div><h3>LIVE TRADING · NY OPEN</h3><p>Operativa en vivo por Discord con lectura de contexto, análisis y ejecución en tiempo real.</p></div>
+    <div class="feature"><div class="num">02</div><h3>MÉTODO CHRISNASDAQ</h3><p>Contexto, estructura, liquidez, precio y confirmaciones de volumen aplicadas de forma práctica.</p></div>
+    <div class="feature"><div class="num">03</div><h3>ANÁLISIS PERSONALIZADO</h3><p>Revisión de tu proceso, errores recurrentes, ejecución y hábitos para identificar qué necesitas trabajar.</p></div>
+    <div class="feature"><div class="num">04</div><h3>ANÁLISIS DE CARTERA</h3><p>Espacio para revisar exposición, decisiones y contexto general de tu operativa.</p></div>
+    <div class="feature"><div class="num">05</div><h3>MACRO & CONTEXTO</h3><p>Lectura de datos y eventos relevantes para entender el entorno antes de operar.</p></div>
+    <div class="feature"><div class="num">06</div><h3>SPOT & MERCADOS</h3><p>Seguimiento de posibles oportunidades en spot y análisis de activos de interés.</p></div>
+    <div class="feature"><div class="num">07</div><h3>EMPRESAS DE EE.UU.</h3><p>Análisis y seguimiento de compañías estadounidenses relevantes para los mercados.</p></div>
+    <div class="feature"><div class="num">08</div><h3>PSICOTRADING</h3><p>Trabajo sobre disciplina, gestión emocional y toma de decisiones bajo presión.</p></div>
+    <div class="feature"><div class="num">09</div><h3>INTELIGENCIA EMOCIONAL</h3><p>Identificación de patrones que pueden afectar tu ejecución y tu relación con el riesgo.</p></div>
+    <div class="feature"><div class="num">10</div><h3>COMUNIDAD DK</h3><p>Un entorno pequeño para preguntas, análisis, aprendizaje y acompañamiento.</p></div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-top">
+      <div>
+        <div class="eyebrow">LIVE SCHEDULE</div>
+        <h3>Operamos juntos en NY Open.</h3>
+      </div>
+      <small>Horario de Nueva York</small>
+    </div>
+    <div class="days">
+      <div class="day"><b>Lunes</b><span>10:30 AM · NY</span></div>
+      <div class="day"><b>Miércoles</b><span>10:30 AM · NY</span></div>
+      <div class="day"><b>Viernes</b><span>10:30 AM · NY</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap plans">
+  <div class="section-head">
+    <div class="eyebrow">ACCESO</div>
+    <h2>Elige tu modalidad.</h2>
+    <p>Dos formas de formar parte del Room. Sin descuentos artificiales ni promociones de cuenta regresiva.</p>
+  </div>
+
+  <div class="plan-grid">
+    <div class="plan">
+      <h3>MENSUAL</h3>
+      <div class="price">$100<span>/ mes</span></div>
+      <div class="plan-note">Acceso al DK Trading Room durante un mes.</div>
+      <a class="btn dark" href="#solicitar">SOLICITAR ACCESO →</a>
+    </div>
+
+    <div class="plan featured">
+      <div class="badge">3 MESES</div>
+      <h3>TRIMESTRAL</h3>
+      <div class="price">$250<span>/ 3 meses</span></div>
+      <div class="plan-note">Acceso al DK Trading Room durante tres meses.</div>
+      <a class="btn green" href="#solicitar">SOLICITAR ACCESO →</a>
+    </div>
+  </div>
+
+  <div class="process">
+    <div class="step"><span>01 · SOLICITUD</span><h3>Elige tu modalidad</h3><p>Selecciona mensual o trimestral.</p></div>
+    <div class="step"><span>02 · ACCESO</span><h3>Recibe las instrucciones</h3><p>Te envío los datos correspondientes al método de pago elegido.</p></div>
+    <div class="step"><span>03 · ACTIVACIÓN</span><h3>Envía tu comprobante</h3><p>Una vez verificado, coordinamos tu incorporación al Room.</p></div>
+  </div>
+</section>
+
+<section id="solicitar" class="wrap" style="padding-bottom:70px">
+  <div class="access">
+    <div class="eyebrow">SOLICITAR ACCESO</div>
+    <h2>¿Quieres formar parte del Room?</h2>
+    <p>
+      Escríbeme directamente indicando <strong style="color:#fff">“DK ROOM”</strong>
+      y la modalidad que te interesa. Los datos de pago se entregan directamente,
+      en lugar de publicarlos en la página.
+    </p>
+    <a class="btn green" href="https://t.me/CMDKTRADING" target="_blank" rel="noopener">
+      TELEGRAM · @CMDKTRADING →
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><b>DK TRADING ACADEMY</b><br>by ChrisNasdaq</div>
+    <div>Leer el mercado · Gestionar el riesgo · Ejecutar el proceso</div>
+  </div>
+</footer>
+
+</body>
+</html>
