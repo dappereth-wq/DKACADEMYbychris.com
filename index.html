@@ -1,12 +1,18 @@
-<!doctype html>
+A<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
+<meta name="robots" content="index,follow">
 
-<title>DK Academy — ChrisNasdaq</title>
-<meta name="description" content="ChrisNasdaq — Trader, educador y fundador de DK Academy. Nasdaq, Oro y Crypto. Psicotrading, gestión de riesgo y lectura del mercado.">
+<title>DK Academy | Formación con ChrisNasdaq</title>
+<link rel="canonical" href="https://dkacademy.online/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DK Academy | ChrisNasdaq">
+<meta property="og:description" content="Ruta educativa sobre lectura del mercado, volumen, gestión del riesgo y psicología de decisiones.">
+<meta property="og:url" content="https://dkacademy.online/">
+<meta name="theme-color" content="#04101b">
+<meta name="description" content="DK Academy by ChrisNasdaq: formación educativa sobre lectura del mercado, estructura, liquidez, volumen, gestión del riesgo y psicología de decisiones.">
 <style>
 :root{--bg:#04101b;--card:#081b2b;--line:#17425b;--blue:#087cff;--green:#14e59a;--text:#f7fbff;--muted:#a9b8c7}
 *{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 75% 0,#0c2a43 0,#04101b 42%,#020a12 100%);color:var(--text);font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
@@ -46,13 +52,67 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
 @media(max-width:850px){.room-grid,.payment-grid{grid-template-columns:1fr}.room-includes{grid-template-columns:1fr}}
 
 .room-teaser{padding:76px 0 72px}.room-teaser .sectionhead{text-align:center;max-width:780px;margin:0 auto 28px}.room-teaser-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.room-teaser-item{border:1px solid var(--line);border-radius:12px;padding:17px;background:#061521}.room-teaser-item b{display:block;color:#fff;font-size:10px;margin-bottom:6px}.room-teaser-item span{display:block;color:#91a3b3;font-size:10px;line-height:1.5}@media(max-width:850px){.room-teaser-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.room-teaser{padding:55px 0}.room-teaser-grid{grid-template-columns:1fr}}
+
+/* DK Academy learning area */
+.learning-section{background:linear-gradient(180deg,#04101b 0%,#061827 55%,#04101b 100%);border-top:1px solid #123047;border-bottom:1px solid #123047}
+.learning-heading{max-width:790px;margin:0 auto 28px}
+.learning-heading p{max-width:670px;margin:0 auto}
+.learning-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 16px;border:1px solid #15364c;border-radius:12px;background:#071723;margin:0 0 16px;color:#8fa7b8;font-size:10px;letter-spacing:1.4px;font-weight:800}
+.learning-toolbar>div{display:flex;align-items:center;gap:9px}
+.learning-dot{width:7px;height:7px;border-radius:50%;background:#14e59a;box-shadow:0 0 12px #14e59a88}
+.learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.learn-card{position:relative;overflow:hidden;padding:23px;border:1px solid #17374b;border-radius:16px;background:radial-gradient(circle at 100% 0%,color-mix(in srgb,var(--module-accent) 11%,transparent),transparent 42%),linear-gradient(150deg,#0a1d2b,#06131e);transition:transform .2s ease,border-color .2s ease}
+.learn-card:hover{transform:translateY(-3px);border-color:var(--module-accent)}
+.learn-card:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--module-accent)}
+.learn-card-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.learn-number{font-size:29px;line-height:1;font-weight:900;color:var(--module-accent);letter-spacing:-1px}
+.learn-tag{font-size:9px;letter-spacing:1.4px;color:#9cb2c3;font-weight:800;text-align:right}
+.learn-card h3{font-size:20px;line-height:1.25;margin:18px 0 9px;color:#f0f6fb}
+.learn-summary{font-size:13px;line-height:1.7;color:#9eb0bf;min-height:44px}
+.learn-details{margin-top:17px;border-top:1px solid #19384b;padding-top:13px}
+.learn-details summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;color:#e8f2fa;font-size:10px;letter-spacing:1.2px;font-weight:900}
+.learn-details summary::-webkit-details-marker{display:none}
+.learn-details summary span{font-size:18px;color:var(--module-accent);transition:transform .2s ease}
+.learn-details[open] summary span{transform:rotate(45deg)}
+.learn-detail-content{padding-top:13px;color:#afbfcb;font-size:12px;line-height:1.7}
+.learn-detail-content strong{color:#f0f6fb}
+.learn-detail-content ul{padding-left:18px;margin:4px 0 13px}
+.learn-detail-content li{margin:3px 0}
+.learn-exercise{padding:12px;border-radius:10px;background:#0c2432;border:1px solid #183d50;margin:12px 0}
+.learn-pdf{display:inline-flex;margin-top:3px;padding:10px 13px;border-radius:8px;border:1px solid #1d5d77;color:#e9f7ff;text-decoration:none;font-size:10px;letter-spacing:1px;font-weight:900}
+.learn-pdf:hover{background:#0c3042;border-color:#14e59a}
+.learning-disclaimer{max-width:800px;margin:24px auto 0;text-align:center;color:#7f95a6;font-size:11px;line-height:1.7}
+.mentorship-section{background:#06131e}
+.mentorship-panel{display:grid;grid-template-columns:1.45fr .7fr;gap:34px;align-items:stretch;padding:clamp(22px,4vw,44px);border:1px solid #1b4054;border-radius:22px;background:radial-gradient(circle at 100% 0%,#0d3a4633,transparent 38%),linear-gradient(145deg,#0a1d2b,#06111b);box-shadow:0 24px 70px #0004}
+.mentorship-copy h2{font-size:clamp(32px,4vw,46px);margin:10px 0 14px}
+.mentorship-lead{max-width:730px;color:#b2c2ce;line-height:1.8;font-size:14px}
+.mentorship-value-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:25px 0}
+.mentorship-value-grid>div{padding:15px;border:1px solid #1a394b;border-radius:12px;background:#071723}
+.mentorship-value-grid span{display:block;color:#14e59a;font-size:10px;font-weight:900;letter-spacing:1px;margin-bottom:8px}
+.mentorship-value-grid b{display:block;color:#f1f6fa;font-size:13px;margin-bottom:6px}
+.mentorship-value-grid p{margin:0;color:#9eb1bf;font-size:11px;line-height:1.65}
+.mentorship-note{color:#8299a9;font-size:10px;line-height:1.7}
+.mentorship-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn.outline{background:transparent;border:1px solid #2c536a;color:#dcebf5;cursor:pointer}
+.copy-mentorship-status{font-size:11px;color:#8fa7b8;line-height:1.6;margin-top:12px}
+.mentorship-side{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:320px;padding:20px;border:1px solid #1b3d50;border-radius:16px;background:radial-gradient(circle,#0d3343 0%,#071723 68%)}
+.mentorship-orbit{width:175px;height:175px;border-radius:50%;border:1px solid #1b5364;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 0 0 12px #0c2b38,0 0 0 13px #173c4b,0 0 45px #14e59a20;margin-bottom:28px}
+.mentorship-orbit:before,.mentorship-orbit:after{content:"";position:absolute;border:1px dashed #277185;border-radius:50%;inset:17px}
+.mentorship-orbit:after{inset:36px;border-style:solid;border-color:#14e59a55}
+.mentorship-orbit span{font-size:48px;letter-spacing:-4px;font-weight:900;color:#eef8ff}
+.mentorship-orbit i{position:absolute;right:-6px;top:16px;padding:8px 10px;border-radius:9px;background:#14e59a;color:#04101b;font-size:12px;font-style:normal;font-weight:900}
+.mentorship-side-label{font-size:10px;letter-spacing:2px;font-weight:900;color:#14e59a;text-align:center}
+.mentorship-side p{max-width:270px;text-align:center;font-size:12px;line-height:1.7;color:#9eb2c1}
+@media(max-width:850px){.mentorship-panel{grid-template-columns:1fr}.mentorship-side{min-height:260px}.mentorship-side .mentorship-orbit{width:145px;height:145px}}
+@media(max-width:600px){.learning-grid{grid-template-columns:1fr}.learning-toolbar{align-items:flex-start;flex-direction:column}.learn-card{padding:20px}.mentorship-value-grid{grid-template-columns:1fr}.mentorship-actions .btn{width:100%;text-align:center;justify-content:center}}
+
 </style>
 
 </head>
 <body>
 <nav><div class="wrap nav">
 <a class="brand" href="#inicio"><img src="logo.png" alt="DK Trading"><span>DK<br><small>TRADING ACADEMY</small></span></a>
-<div class="links"><a href="#sobre">SOBRE MÍ</a><a href="#enfoque">ENFOQUE</a><a href="#contenido">CONTENIDO</a><a href="#recursos">RECURSOS</a><a href="#comunidad">COMUNIDAD</a><a href="#skool">SKOOL</a><a href="#room">DK TRADING ROOM</a><a href="#lives">LIVES</a></div>
+<div class="links"><a href="#sobre">SOBRE MÍ</a><a href="#enfoque">ENFOQUE</a><a href="#formacion">FORMACIÓN</a><a href="#mentoria">MENTORÍA 1:1</a><a href="#contenido">CONTENIDO</a><a href="#recursos">RECURSOS</a><a href="#comunidad">COMUNIDAD</a><a href="#skool">SKOOL</a><a href="#room">DK TRADING ROOM</a><a href="#lives">LIVES</a></div>
 <a class="btn green" href="#comunidad">ÚNETE A DK TRADING →</a>
 </div></nav>
 
@@ -122,6 +182,254 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
 </div>
 <div class="sectionhead" style="margin-top:45px"><div class="eyebrow">MIS HERRAMIENTAS</div><p>VWAP · Volume Profile · Delta Bar · Delta Suite · CVD · Volumen · Order Flow · Bookmap</p><p><strong style="color:#fff">Opero principalmente en NinjaTrader.</strong> También utilizo herramientas de Mate Trading en mi operativa.</p><a class="btn" href="https://www.matetrading.com/" target="_blank" rel="noopener">MATE TRADING →</a></div>
 </div></section>
+
+
+<section id="formacion" class="learning-section">
+  <div class="wrap">
+    <div class="sectionhead learning-heading">
+      <div class="eyebrow">RUTA DE APRENDIZAJE · DK ACADEMY</div>
+      <h2>Menos conceptos. <span class="grad">Más criterio.</span></h2>
+      <p>Explora los módulos, revisa qué temas cubre cada uno y abre sus guías introductorias. El contenido se irá ampliando de forma progresiva.</p>
+    </div>
+    <div class="learning-toolbar">
+      <div><span class="learning-dot"></span> RUTA EDUCATIVA</div>
+      <span>10 MÓDULOS · GUÍAS INTRODUCTORIAS</span>
+    </div>
+    <div class="learning-grid">
+
+    <article class="learn-card" style="--module-accent:#1689ff">
+      <div class="learn-card-top">
+        <span class="learn-number">01</span>
+        <span class="learn-tag">BASES</span>
+      </div>
+      <h3>Fundamentos del mercado</h3>
+      <p class="learn-summary">Entiende qué estás observando antes de interpretar un movimiento.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Distinguir datos, hipótesis y confirmaciones; comprender sesiones, participantes y contexto general.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Qué es un mercado y cómo se forma el precio</li><li>Sesiones y horarios como contexto, no como señal</li><li>Diferencia entre observación, hipótesis y confirmación</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>Elige un gráfico histórico y escribe cinco observaciones objetivas sin predecir qué ocurrirá después.</div>
+          <a class="learn-pdf" href="recursos/modulo-01-fundamentos-del-mercado.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+
+    <article class="learn-card" style="--module-accent:#14e59a">
+      <div class="learn-card-top">
+        <span class="learn-number">02</span>
+        <span class="learn-tag">LECTURA DEL PRECIO</span>
+      </div>
+      <h3>Velas y Price Action</h3>
+      <p class="learn-summary">Aprende a describir velas, impulsos y retrocesos sin aislarlos del contexto.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Leer la información básica de una vela y explicar por qué una vela aislada no confirma una dirección futura.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Apertura, máximo, mínimo y cierre</li><li>Cuerpo, mechas y rangos de vela</li><li>Impulsos, retrocesos y contexto de las velas</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>Compara varias velas de un gráfico histórico y describe qué muestran, evitando etiquetarlas como señales seguras.</div>
+          <a class="learn-pdf" href="recursos/modulo-02-velas-price-action.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+
+    <article class="learn-card" style="--module-accent:#1689ff">
+      <div class="learn-card-top">
+        <span class="learn-number">03</span>
+        <span class="learn-tag">CONTEXTO</span>
+      </div>
+      <h3>Estructura de mercado</h3>
+      <p class="learn-summary">Organiza máximos, mínimos, tendencias y rangos en una lectura coherente.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Reconocer distintas estructuras y explicar cómo cambia la lectura al ampliar o reducir la temporalidad.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Máximos y mínimos relevantes</li><li>Tendencia frente a rango</li><li>Cambios de estructura y falsas conclusiones</li><li>Relación entre temporalidades</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>Marca en un gráfico histórico los máximos y mínimos que consideres relevantes y explica por qué los elegiste.</div>
+          <a class="learn-pdf" href="recursos/modulo-03-estructura-de-mercado.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+
+    <article class="learn-card" style="--module-accent:#14e59a">
+      <div class="learn-card-top">
+        <span class="learn-number">04</span>
+        <span class="learn-tag">ZONAS RELEVANTES</span>
+      </div>
+      <h3>Liquidez y contexto</h3>
+      <p class="learn-summary">Comprende el concepto de liquidez y evita asumir que una zona garantiza una reacción.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Explicar el concepto de liquidez con lenguaje claro e identificar zonas de interés como hipótesis, no como certezas.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Liquidez como concepto de mercado</li><li>Máximos y mínimos visibles</li><li>Zonas de interés y escenarios alternativos</li><li>Limitaciones de una lectura basada en una sola zona</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>Describe dos posibles respuestas del precio alrededor de una zona histórica, sin elegir una como segura.</div>
+          <a class="learn-pdf" href="recursos/modulo-04-liquidez-y-contexto.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+
+    <article class="learn-card" style="--module-accent:#1689ff">
+      <div class="learn-card-top">
+        <span class="learn-number">05</span>
+        <span class="learn-tag">HERRAMIENTAS</span>
+      </div>
+      <h3>VWAP y Volume Profile</h3>
+      <p class="learn-summary">Conoce qué representan estas herramientas, qué muestran y qué no pueden asegurar.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Interpretar los conceptos básicos de VWAP y Volume Profile sin tratarlos como predictores infalibles.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Qué representa el VWAP</li><li>Conceptos de volumen por precio</li><li>Áreas de aceptación y zonas de menor actividad</li><li>Limitaciones, configuración y contexto</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>Observa un ejemplo histórico y redacta qué información aporta cada herramienta y qué preguntas deja abiertas.</div>
+          <a class="learn-pdf" href="recursos/modulo-05-vwap-volume-profile.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+
+    <article class="learn-card" style="--module-accent:#14e59a">
+      <div class="learn-card-top">
+        <span class="learn-number">06</span>
+        <span class="learn-tag">DATOS</span>
+      </div>
+      <h3>Volumen, Delta y CVD</h3>
+      <p class="learn-summary">Interpreta datos de volumen y entiende por qué deben contrastarse con el contexto.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Diferenciar volumen, Delta y CVD, y reconocer que los datos no garantizan el resultado de un movimiento.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Volumen total y volumen relativo</li><li>Concepto de Delta</li><li>Qué resume el CVD</li><li>Divergencias aparentes y limitaciones de los datos</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>En una captura histórica, identifica qué dato ves y escribe qué no puedes concluir únicamente a partir de él.</div>
+          <a class="learn-pdf" href="recursos/modulo-06-volumen-delta-cvd.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+
+    <article class="learn-card" style="--module-accent:#1689ff">
+      <div class="learn-card-top">
+        <span class="learn-number">07</span>
+        <span class="learn-tag">PROCESO</span>
+      </div>
+      <h3>Método DK: integrar el contexto</h3>
+      <p class="learn-summary">Conecta observación, estructura y herramientas en un proceso de análisis explicable.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Crear una secuencia ordenada para observar el mercado, documentar hipótesis y revisar qué información falta.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Contexto general antes del detalle</li><li>Estructura y zonas relevantes</li><li>Herramientas como confirmación contextual, no como garantía</li><li>Escenarios alternativos y registro de decisiones</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>Completa una ficha de análisis histórico con contexto, observaciones, hipótesis, alternativas y dudas pendientes.</div>
+          <a class="learn-pdf" href="recursos/modulo-07-metodo-dk.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+
+    <article class="learn-card" style="--module-accent:#14e59a">
+      <div class="learn-card-top">
+        <span class="learn-number">08</span>
+        <span class="learn-tag">RESPONSABILIDAD</span>
+      </div>
+      <h3>Gestión del riesgo</h3>
+      <p class="learn-summary">Comprende la incertidumbre, la exposición y la importancia de definir límites.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Entender los conceptos de riesgo y pérdida potencial, y por qué ninguna metodología elimina la posibilidad de perder.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Riesgo frente a resultado</li><li>Exposición y pérdida potencial</li><li>Límites y reglas escritas</li><li>Por qué evitar decisiones impulsivas y promesas de rentabilidad</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>Diseña una lista de preguntas de riesgo que deberían responderse antes de evaluar cualquier decisión financiera.</div>
+          <a class="learn-pdf" href="recursos/modulo-08-gestion-del-riesgo.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+
+    <article class="learn-card" style="--module-accent:#1689ff">
+      <div class="learn-card-top">
+        <span class="learn-number">09</span>
+        <span class="learn-tag">REVISIÓN</span>
+      </div>
+      <h3>Diario y evaluación del proceso</h3>
+      <p class="learn-summary">Registra razonamientos y errores para aprender de forma ordenada.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Separar la calidad del proceso del resultado puntual y construir un registro útil para el aprendizaje.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Qué registrar en un diario</li><li>Contexto, hipótesis y evidencia</li><li>Errores de interpretación y sesgos</li><li>Revisión periódica y lecciones aprendidas</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>Usa una situación histórica o simulada para completar una entrada de diario sin utilizar dinero real.</div>
+          <a class="learn-pdf" href="recursos/modulo-09-diario-de-aprendizaje.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+
+    <article class="learn-card" style="--module-accent:#14e59a">
+      <div class="learn-card-top">
+        <span class="learn-number">10</span>
+        <span class="learn-tag">HÁBITOS</span>
+      </div>
+      <h3>Psicología y disciplina</h3>
+      <p class="learn-summary">Reconoce sesgos y emociones que pueden afectar la toma de decisiones.</p>
+      <details class="learn-details">
+        <summary>EXPLORAR MÓDULO <span aria-hidden="true">＋</span></summary>
+        <div class="learn-detail-content">
+          <p><strong>Qué vas a aprender</strong><br>Identificar hábitos de revisión, pausas y límites personales que favorezcan decisiones más conscientes.</p>
+          <p><strong>Temario</strong></p>
+          <ul><li>Sesgos comunes al interpretar resultados</li><li>Impulsividad y exceso de confianza</li><li>Rutinas de preparación y revisión</li><li>Cuándo detenerse y pedir orientación</li></ul>
+          <div class="learn-exercise"><strong>Ejercicio de reflexión</strong><br>Escribe un plan personal de revisión que incluya señales de cansancio, límites y preguntas de reflexión.</div>
+          <a class="learn-pdf" href="recursos/modulo-10-psicologia-y-disciplina.pdf" target="_blank" rel="noopener">VER GUÍA PDF ↗</a>
+        </div>
+      </details>
+    </article>
+    
+    </div>
+    <p class="learning-disclaimer">Este espacio es educativo. Las guías no son recomendaciones financieras ni instrucciones para operar con dinero real; ningún análisis elimina el riesgo.</p>
+  </div>
+</section>
+
+
+<section id="mentoria" class="mentorship-section">
+  <div class="wrap">
+    <div class="mentorship-panel">
+      <div class="mentorship-copy">
+        <div class="eyebrow">ACOMPAÑAMIENTO PERSONALIZADO</div>
+        <h2>Mentoría <span class="grad">uno a uno.</span></h2>
+        <p class="mentorship-lead">Un espacio individual para profundizar en tu proceso de aprendizaje, detectar puntos que necesitas reforzar y construir una ruta de estudio adaptada a tus objetivos.</p>
+        <div class="mentorship-value-grid">
+          <div><span>01</span><b>Diagnóstico inicial</b><p>Revisamos tu punto de partida, tus dudas y tus objetivos de aprendizaje.</p></div>
+          <div><span>02</span><b>Ruta personalizada</b><p>Organizamos los conceptos y temas que conviene estudiar primero.</p></div>
+          <div><span>03</span><b>Revisión individual</b><p>Analizamos ejemplos educativos, razonamiento y errores de interpretación.</p></div>
+          <div><span>04</span><b>Seguimiento del proceso</b><p>Definimos tareas, hábitos de estudio y próximos pasos para medir avances.</p></div>
+        </div>
+        <p class="mentorship-note">La mentoría es formativa: no garantiza resultados económicos ni sustituye asesoramiento financiero. No se prometen ganancias.</p>
+        <div class="mentorship-actions">
+          <a class="btn green" href="https://instagram.com/chrisnasdaq" target="_blank" rel="noopener">CONSULTAR POR DM ↗</a>
+          <button class="btn outline" type="button" id="copyMentorshipMessage">COPIAR MENSAJE PARA DM</button>
+        </div>
+        <p id="copyMentorshipStatus" class="copy-mentorship-status" aria-live="polite">Mensaje sugerido: “Hola Chris, quiero información sobre la mentoría uno a uno de DK Academy”.</p>
+      </div>
+      <div class="mentorship-side">
+        <div class="mentorship-orbit" aria-hidden="true"><span>DK</span><i>1:1</i></div>
+        <div class="mentorship-side-label">UN PROCESO ADAPTADO A TI</div>
+        <p>Menos improvisación. Más claridad sobre qué estudiar, qué revisar y cómo documentar tu aprendizaje.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section><div class="wrap"><div class="sectionhead"><div class="eyebrow">MIS MERCADOS</div><h2>Especialización antes que dispersión.</h2><p>El Nasdaq es mi mercado principal, pero la metodología puede adaptarse a distintos activos.</p></div>
 <div class="grid5">
@@ -237,4 +545,22 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
 <div class="toast-room" id="toastRoom">Copiado ✓</div>
 <script>function copyRoom(t){navigator.clipboard.writeText(t).then(function(){var x=document.getElementById('toastRoom');x.classList.add('show');setTimeout(function(){x.classList.remove('show')},1400)})}</script>
 <footer><div class="wrap foot"><div><b style="color:#fff">DK TRADING ACADEMY</b><br>by ChrisNasdaq</div><div>Leer el mercado. Gestionar el riesgo. Ejecutar el proceso.</div></div></footer>
+
+<script>
+(function(){
+  const copyButton = document.getElementById('copyMentorshipMessage');
+  const status = document.getElementById('copyMentorshipStatus');
+  if(!copyButton || !status) return;
+  const message = 'Hola Chris, quiero información sobre la mentoría uno a uno de DK Academy.';
+  copyButton.addEventListener('click', async function(){
+    try {
+      await navigator.clipboard.writeText(message);
+      status.textContent = 'Mensaje copiado. Abre Instagram y pégalo en el DM.';
+    } catch (e) {
+      status.textContent = 'Copia este mensaje: ' + message;
+    }
+  });
+})();
+</script>
+
 </body></html>
