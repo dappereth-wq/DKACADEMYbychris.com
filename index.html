@@ -141,6 +141,42 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
 @media(max-width:520px){#dkApexBanner{right:10px!important;left:auto!important;bottom:10px!important;max-width:calc(100vw - 20px);gap:7px;padding:7px!important}#dkApexBanner .apex-b-text b{font-size:12px!important}#dkApexBanner .apex-b-text small{font-size:9px!important}#dkApexBanner .apex-b-go{font-size:9px!important;padding:7px 8px!important}}
 </style>
 
+<style>
+/* DK visual refinements + Prop Firms */
+:root{--muted:#bdcbd8}
+.links{color:#eef6ff}
+.links a{transition:color .2s ease,text-shadow .2s ease}
+.links a:hover{color:#14e59a;text-shadow:0 0 14px #14e59a55}
+.kicker,.eyebrow{ text-shadow:0 0 14px #14e59a35 }
+.sectionhead h2,.platform-title,.copy h2,.feature h3,.mentorship-copy h2{color:#f8fbff;text-shadow:0 2px 18px #1689ff22}
+.hero h2{color:#ffffff;text-shadow:0 2px 14px #1689ff20}
+.hero p,.copy p,.sectionhead p,.card p{color:#c2cfda}
+
+.propfirm-section{margin:0 0 42px}
+.propfirm-heading{text-align:left;margin:0 0 18px}
+.propfirm-heading h2{font-size:28px;margin:8px 0;color:#f8fbff}
+.propfirm-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:860px}
+.propfirm-card{min-height:158px;display:flex;align-items:center;gap:18px;padding:22px;border:1px solid #1d4d63;border-radius:16px;background:linear-gradient(145deg,#0b2233,#04111c);box-shadow:0 12px 32px #0003;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.propfirm-card:hover{transform:translateY(-3px);border-color:#14e59a88;box-shadow:0 16px 38px #0005,0 0 22px #14e59a12}
+.propfirm-mark{flex:0 0 76px;width:76px;height:58px;display:flex;align-items:center;justify-content:center;border-radius:11px;background:#f7fbff;color:#071a2b;font-size:15px;font-weight:900;letter-spacing:.5px;text-align:center;line-height:1.05;padding:5px}
+.propfirm-mark.nys{background:linear-gradient(135deg,#dceeff,#ffffff);color:#12365c;font-size:13px;letter-spacing:1px}
+.propfirm-copy{min-width:0}
+.propfirm-copy .type{display:block;margin-bottom:7px;color:#14e59a;font-size:9px;font-weight:900;letter-spacing:2px}
+.propfirm-copy h3{margin:0 0 6px;color:#f8fbff;font-size:17px;line-height:1.2}
+.propfirm-copy p{margin:0;color:#bdcbd8;font-size:11px;line-height:1.55}
+.propfirm-note{max-width:860px;margin:12px 0 0;color:#91a6b8;font-size:10px;line-height:1.6}
+
+/* Give Live Trading its own visual rhythm and a restrained pulse. */
+.community{display:flex;flex-direction:column;align-items:center;gap:42px}
+.community>.feature:first-child{width:min(760px,100%)}
+.community>.feature#lives{width:min(960px,100%);margin-top:0;border-color:#14e59a88;box-shadow:0 0 0 1px #14e59a20,0 18px 48px #0005;animation:dkLivePulse 3.2s ease-in-out infinite}
+.community>.feature#lives .featurebody{position:relative}
+.community>.feature#lives h3{color:#ffffff;text-shadow:0 0 18px #14e59a20}
+.community>.feature#lives .schedule{margin:22px 0}
+@keyframes dkLivePulse{0%,100%{border-color:#1d4d63;box-shadow:0 0 0 1px #14e59a10,0 18px 48px #0005}50%{border-color:#14e59a;box-shadow:0 0 0 3px #14e59a20,0 18px 52px #14e59a18}}
+@media(max-width:700px){.propfirm-grid{grid-template-columns:1fr}.propfirm-card{min-height:130px;padding:18px}.community{gap:30px}}
+@media(prefers-reduced-motion:reduce){.community>.feature#lives,.propfirm-card,.links a{animation:none;transition:none}}
+</style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VMB8J70T0"></script>
 <script>
@@ -491,6 +527,24 @@ section{padding:75px 0}.sectionhead{text-align:center;margin-bottom:32px}.sectio
 <div class="eyebrow">PLATAFORMAS</div>
 <h2 class="platform-title">Mis plataformas</h2>
 <p>Enlaces oficiales de las plataformas que forman parte de mi ecosistema de trading.</p>
+</div>
+<div class="propfirm-section" aria-label="Prop firms mencionadas en DK Academy">
+<div class="sectionhead propfirm-heading">
+<div class="eyebrow">PROP FIRMS</div>
+<h2>Empresas del sector</h2>
+<p>Referencias informativas dentro del ecosistema de DK Academy.</p>
+</div>
+<div class="propfirm-grid">
+<article class="propfirm-card">
+<div class="propfirm-mark" aria-hidden="true">APEX</div>
+<div class="propfirm-copy"><span class="type">PROP FIRM</span><h3>Apex Trader Funding</h3><p>Información general de la empresa y sus programas.</p></div>
+</article>
+<article class="propfirm-card">
+<div class="propfirm-mark nys" aria-hidden="true">NYS<br/>MARKETS</div>
+<div class="propfirm-copy"><span class="type">PROP FIRM</span><h3>NYS Markets</h3><p>Información general de la empresa y sus programas.</p></div>
+</article>
+</div>
+<p class="propfirm-note">Estas menciones son informativas y no constituyen una recomendación. Consulta directamente las condiciones, criterios de elegibilidad y riesgos de cada empresa.</p>
 </div>
 <div class="sectionhead" style="margin:0 0 18px;text-align:left">
 <div class="eyebrow">EXCHANGES</div>
